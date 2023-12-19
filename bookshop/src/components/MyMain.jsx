@@ -1,16 +1,20 @@
 import React from "react";
 import Welcome from "./Welcome";
-import { fantasy, history, horror, romance, scifi } from "./books";
+import fantasy from "../books/fantasy.json";
 import { Row, Col } from "react-bootstrap";
-import BookCard from ./book
+import BookCard from "./BookCard";
 
 function MyMain() {
   return (
     <>
       <Welcome />
       <Row>
-        {fantasy.map((fantasybook) => {
-          return <BookCard />;
+        {fantasy.map((fantasybook, index) => {
+          return (
+            <Col sm={4} key={`cardBook-${index}`}>
+              <BookCard book={fantasybook} />
+            </Col>
+          );
         })}
       </Row>
     </>

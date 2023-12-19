@@ -2,16 +2,16 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-function BookCard() {
+function BookCard(props) {
   return (
-    <Card key={props.asin}>
-      <Card.Img variant="top" src={props.img} />
+    <Card key={props.book.asin}>
+      <Card.Img variant="top" src={props.book.img} />
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
+        <Card.Title>{props.book.title}</Card.Title>
         <Card.Text>
           <p>DART KEBAB APPROVED!</p>
-          <p>{props.category}</p>
-          <p>{props.price}</p>
+          <p>{props.book.category}</p>
+          <p>{props.book.price}</p>
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>

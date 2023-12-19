@@ -6,7 +6,7 @@ function Welcome() {
   return (
     <div>
       <h2>Che Belli quei tovaglioli da Kebab</h2>
-      <Alert key="warning" variant="warning">
+      <Alert className="text-center" key="warning" variant="warning">
         DART KEBAB
       </Alert>
     </div>

@@ -8,10 +8,10 @@ function MyMain() {
   return (
     <>
       <Welcome />
-      <Row>
+      <Row className="gy-3">
         {fantasy.map((fantasybook, index) => {
           return (
-            <Col sm={4} key={`cardBook-${index}`}>
+            <Col sm={3} lg={2} key={`cardBook-${index}`}>
               <BookCard book={fantasybook} />
             </Col>
           );
